@@ -1,0 +1,409 @@
+{
+	"info": {
+		"_postman_id": "72b7cb7a-0a97-4bfd-9fc4-5490ac2356b5",
+		"name": "recipe-sharing-app",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "24866340"
+	},
+	"item": [
+		{
+			"name": "Create New User",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6NSwidXNlcm5hbWUiOiJlbWlseSIsImVtYWlsIjoiZW1pbHlAZ21haWwuY29tIiwiaWF0IjoxNjc1NDMyNDU0fQ.gIXwUMKZKVE8fpjFgyQwhPKjDTP67HFI4aY1Fyg5Um0",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"username\": \"emily\",\n    \"description\":\"Sous chef\",\n    \"email\": \"emily@gmail.com\",\n    \"password\": \"123\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/user",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"user"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get All User",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6NSwidXNlcm5hbWUiOiJlbWlseSIsImVtYWlsIjoiZW1pbHlAZ21haWwuY29tIiwiaWF0IjoxNjc1NDMyNDU0fQ.gIXwUMKZKVE8fpjFgyQwhPKjDTP67HFI4aY1Fyg5Um0",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/user",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"user"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get One User",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6NSwidXNlcm5hbWUiOiJlbWlseSIsImVtYWlsIjoiZW1pbHlAZ21haWwuY29tIiwiaWF0IjoxNjc1NDMyNDU0fQ.gIXwUMKZKVE8fpjFgyQwhPKjDTP67HFI4aY1Fyg5Um0",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/user/5",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"user",
+						"5"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Create Recipe",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6NSwidXNlcm5hbWUiOiJlbWlseSIsImVtYWlsIjoiZW1pbHlAZ21haWwuY29tIiwiaWF0IjoxNjc1NDMyNDU0fQ.gIXwUMKZKVE8fpjFgyQwhPKjDTP67HFI4aY1Fyg5Um0",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"name\": \"Nasi Goreng\",\n    \"description\": \"Resep nasi goreng\",\n    \"cooktime\": \"15 menit\",\n    \"ingredients\": {\n        \"1\": \"1 butir telur\",\n        \"2\": \"Minyak goreng secukupnya\",\n        \"3\": \"Nasi putih\",\n        \"4\": \"Bumbu nasi goreng\"\n    },\n    \"steps\": {\n        \"1\": \"Panaskan minyak\",\n        \"2\": \"Masukkan telur ke dalam minyak\",\n        \"3\": \"Masukkan nasi\",\n        \"4\": \"Beri sedikit garam\",\n        \"5\": \"Hidangkan\"\n    },\n    \"user_id\": \"4\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/user/4/recipe/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"user",
+						"4",
+						"recipe",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete User",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6NSwidXNlcm5hbWUiOiJlbWlseSIsImVtYWlsIjoiZW1pbHlAZ21haWwuY29tIiwiaWF0IjoxNjc1NDMyNDU0fQ.gIXwUMKZKVE8fpjFgyQwhPKjDTP67HFI4aY1Fyg5Um0",
+							"type": "string"
+						}
+					]
+				},
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/user/3",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"user",
+						"3"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update User",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6NSwidXNlcm5hbWUiOiJlbWlseSIsImVtYWlsIjoiZW1pbHlAZ21haWwuY29tIiwiaWF0IjoxNjc1NDMyNDU0fQ.gIXwUMKZKVE8fpjFgyQwhPKjDTP67HFI4aY1Fyg5Um0",
+							"type": "string"
+						}
+					]
+				},
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"username\": \"regina\",\n    \"description\":\"Beginner Chef, simple recipes\",\n    \"email\": \"ginach07@gmail.com\",\n    \"password\": \"abcd1234\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/user/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"user",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update Recipe",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6NSwidXNlcm5hbWUiOiJlbWlseSIsImVtYWlsIjoiZW1pbHlAZ21haWwuY29tIiwiaWF0IjoxNjc1NDMyNDU0fQ.gIXwUMKZKVE8fpjFgyQwhPKjDTP67HFI4aY1Fyg5Um0",
+							"type": "string"
+						}
+					]
+				},
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"name\": \"Telur Goreng\",\n    \"description\": \"Resep simpel dan beginner friendly\",\n    \"cookTime\": \"5 menit\",\n    \"ingredients\": {\n        \"1\": \"1 butir telur\",\n        \"2\": \"Minyak goreng secukupnya\",\n        \"3\": \"Garam secukupnya\"\n    },\n    \"steps\": {\n        \"1\": \"Panaskan minyak\",\n        \"2\": \"Masukkan telur ke dalam minyak\",\n        \"3\": \"Beri garam secukupnya\"\n    }\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/user/1/recipe/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"user",
+						"1",
+						"recipe",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete Recipe",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6NSwidXNlcm5hbWUiOiJlbWlseSIsImVtYWlsIjoiZW1pbHlAZ21haWwuY29tIiwiaWF0IjoxNjc1NDMyNDU0fQ.gIXwUMKZKVE8fpjFgyQwhPKjDTP67HFI4aY1Fyg5Um0",
+							"type": "string"
+						}
+					]
+				},
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/user/1/recipe/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"user",
+						"1",
+						"recipe",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get All Recipes",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6NSwidXNlcm5hbWUiOiJlbWlseSIsImVtYWlsIjoiZW1pbHlAZ21haWwuY29tIiwiaWF0IjoxNjc1NDMyNDU0fQ.gIXwUMKZKVE8fpjFgyQwhPKjDTP67HFI4aY1Fyg5Um0",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/recipe",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"recipe"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Specific Recipe",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6NSwidXNlcm5hbWUiOiJlbWlseSIsImVtYWlsIjoiZW1pbHlAZ21haWwuY29tIiwiaWF0IjoxNjc1NDMyNDU0fQ.gIXwUMKZKVE8fpjFgyQwhPKjDTP67HFI4aY1Fyg5Um0",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/user/4/recipe/3",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"user",
+						"4",
+						"recipe",
+						"3"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Login",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"email\": \"emily@gmail.com\",\r\n    \"password\": \"123\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/login",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"login"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"auth": {
+		"type": "bearer",
+		"bearer": [
+			{
+				"key": "token",
+				"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6NSwidXNlcm5hbWUiOiJlbWlseSIsImVtYWlsIjoiZW1pbHlAZ21haWwuY29tIiwiaWF0IjoxNjc1NDMyNDU0fQ.gIXwUMKZKVE8fpjFgyQwhPKjDTP67HFI4aY1Fyg5Um0",
+				"type": "string"
+			}
+		]
+	},
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	]
+}
