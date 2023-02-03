@@ -2,10 +2,10 @@
 This is a back-end developer project to create API for recipe sharing app that handles the recipes owned by users. This tool help users to add, delete, update, and get the list of their recipes. This tool requires Node.js.
 
 # Architecture Diagram Merchant Service
-![ARC MERCHANT SERVICE](https://user-images.githubusercontent.com/116246829/215279356-7fe05391-b3c6-4e66-9acd-8f715c493258.jpg)
+![architectural diagram recipe sharing](https://user-images.githubusercontent.com/116246829/216683447-4db6dbae-4a2d-49d3-95de-f3a31193f934.jpg)
 
 # Entity Relationship Diagram
-![ERD MERCHANT SERVICE](https://user-images.githubusercontent.com/116246829/215279358-20ead639-bd2b-425c-ba84-c65a92c9d2c5.jpg)
+![erd recipe sharing jpg](https://user-images.githubusercontent.com/116246829/216683547-c819b356-e4e6-4fc0-a23c-e895a78e2aad.jpg)
 
 # List of API
 
